@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        // 1
+        var parent = function () {
+            this.name = "parent";
+        }
+
+        var child = function () {
+            parent.call(this)
+            this.pws = "123"
+        }
+
+        document.write(new child().name);
+
+        // 2
+        (function (){
+            // console.log(this)
+            this.document.write("IMI")
+        }).call(this)
+    
+        // 3
+        
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <ol>
+        <li>1. 借调实现继承</li>
+        <li>2. 调用匿名函数</li>
+        <li>3. 调用函数,并指定函数内上下文</li>
+        <li>4. 把this绑定为全局对象</li>
+    </ol>
+</body>
+</html>

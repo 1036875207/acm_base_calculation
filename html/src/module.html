@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./module.js" ></script>
+    <script>
+        import ob from './module.js'
+        console.log(ob)
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    commonjs 在第一次加载时运行，然后进行缓存，输出的是值的拷贝（基础数据类型复制缓存，对象进行浅拷贝）
+    es6 import时生成一个只读引用，在使用时运行模块内代码，不进行缓存，输出的是
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        var array = [1, 2, 3, [100, 200, [1000]]]
+        while(array.some(item => Array.isArray(item))) {
+            array = [].concat(...array)
+        }
+        console.log(array)
+
+        // 方法3 reduce
+        var arr = [1, [2, [3, 4]]];
+
+        function flatten(arr) {
+            return arr.reduce(function(prev, next){
+                return prev.concat(Array.isArray(next) ? flatten(next) : next)
+            }, [])
+        }
+
+        console.log(flatten(arr))
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <img src="" alt="">
+</body>
+</html>

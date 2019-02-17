@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .hello {
+            background: blue;
+        }
+        div {
+            width: 300px;
+            height: 300px;
+            background: gray;
+            border: 1px solid black;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <!-- 证明层级上下文比普通元素优先级高 -->
+    <p>层叠上下文的满足条件</p>
+    <ol>
+        <li>
+            1. html根元素
+        </li>
+        <li>2. z-index 不为auto的相对和绝对定位</li>
+        <li>3. opticay 不为1的的元素</li>
+        <li>4. transform不为none</li>
+        <li>5. position：fixed</li>
+    </ol>
+    <div style="position：fixed; top: 0;">
+        fixed
+    </div>
+    <div style="position: absolute;">
+        absolute
+    </div>
+    <div class="hello">
+        <span>background/border</span>
+        <div style="background: red; z-index: -1000;">
+            <p>- z-index</p>
+            <div>
+                <p>normal block</p>
+                <div style="float:left">
+                    <p>float</p>
+                    <div style="display: inline-block">
+                        <p>inline</p>
+                        <div>
+                            <p>z-index:auto or 0</p>
+                            <div>
+                                <p>z-index: 1000</p>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

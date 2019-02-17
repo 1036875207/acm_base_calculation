@@ -1,0 +1,62 @@
+
+#parent {
+display: flex;
+height: 300px;
+background: black;
+justify-content: center;
+align-items: center;
+}
+
+#child {
+background: white;
+text-align: center;
+display: inline-block;
+word-break: break-word;
+} 
+
+
+
+/* 
+#parent {
+    height: 300px;
+    background: black;
+    text-align: center;
+}
+
+#child {
+    background: white;
+    display: inline-block;
+} 
+*/
+
+/* #parent {
+    height: 300px;
+    background: black;
+    position: relative;
+}
+
+#child {
+    display: inline-block;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+} */
+
+/* table cell */
+/* #parent {
+    display: table;
+    height: 300px;
+    background: black;
+    width: 100%;
+}
+
+
+#child {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    background: white;
+    border: 1px solid #666;
+} */

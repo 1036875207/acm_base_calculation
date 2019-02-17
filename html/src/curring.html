@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        // curring
+        // 柯里化
+
+        function curring (fun) {
+            var array = []
+            return function (){
+                if (arguments.length === 0) {
+                    return fun.apply(this, array)
+                } else {
+                    [].push.call(array, arguments)
+                    return arguments.callee
+                }
+            }
+        }
+
+        // fibo
+        f(x) = f(x-1) + f(x-2)
+
+        // 正常
+        function fibo (x) {
+            if (x <= 2) {
+                return 1
+            }
+            return fibo(n-1) + fibo(n-2)
+        }
+
+        // 尾递归
+        function tailfibo (x, acc1, acc2) {
+            if (x <= 2) {
+                return acc1
+            }
+            return tailfibo(x - 1, acc2, acc1 + acc2)
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

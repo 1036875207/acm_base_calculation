@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .floated {
+            height: 30px;
+            widows: 300px;
+            background: red;
+            opacity: 0.5;
+            float: left;
+        }
+        .container p {
+            overflow: hidden;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    浮动元素和绝对定位元素，非块级容器以及overflow不为visiable的块级盒子，都会为它创建新的bfc
+    <ol>
+        <li>1. float的值不为none</li>
+        <li>2. position为absolute 或者 fixed</li>
+        <li>3. display 为 inline-block table-cell flex table-caption inline-flex</li>
+        <li>4. overflow 不是visible(默认值)</li>
+    </ol>
+    <p>应用： 1.避免上下的margin重叠 2.高度撑开 3.解决字体环绕</p>
+
+    <div class="container">
+            <div class="floated">
+                Floated div
+            </div>
+            <p>
+                Quae hic ut ab perferendis sit quod architecto, 
+                dolor debitis quam rem provident aspernatur tempora
+                expedita.
+            </p>
+        </div>
+</body>
+</html>
